@@ -103,16 +103,6 @@ export const PacienteColumns = ({ capturarInformacion, eliminarPaciente, generar
         {
             name: (
                 <>
-                    <AiOutlineGlobal className="w-5 h-5 mr-1" /> País
-                </>
-            ),
-            selector: (row) => row.pais,
-            sortable: true,
-            width: "140px",
-        },
-        {
-            name: (
-                <>
                     <RiGovernmentLine className="w-5 h-5 mr-1" /> Departamento
                 </>
             ),

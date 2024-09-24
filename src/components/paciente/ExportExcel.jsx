@@ -7,14 +7,24 @@ const ExportExcel = ({ data, fileName }) => {
     const fileExtension = '.xlsx';
 
     const exportToCSV = () => {
-        const newData = data.map(item => ({
-            'Nombre Completo': item.nombres + ' ' + item.apellidos,
-            'Identificación': item.tipo_documento + ' ' + item.documento,
-            'Fecha de Nacimiento': item.fecha_nacimiento,
-            'Genero': item.genero,
-            'Departamento': item.departamento,
-            'Ciudad': item.ciudad,
-        }));
+        const newData = data.map(item => {
+            const respuestas = {};
+
+            item.Respuesta.forEach(res => {
+                respuestas[`Pregunta ${res.pregunta_id}`] = res.respuesta || "Sin respuesta";
+            });
+
+            return {
+                'Nombre Completo': item.nombres + ' ' + item.apellidos,
+                'Identificación': item.tipo_documento + ' / ' + item.documento,
+                'Fecha de Nacimiento': item.fecha_nacimiento,
+                'Genero': item.genero,
+                'Departamento': item.departamento,
+                'Ciudad': item.ciudad,
+                ...respuestas
+            };
+        });
+
         const ws = XLSX.utils.json_to_sheet(newData);
         const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
         const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });

@@ -30,7 +30,7 @@ export default function FormLogin({ usuario, loading, handleChange, iniciarSesio
                         <div className="mb-2 block">
                             <Label htmlFor="pass" value="Contraseña" />
                         </div>
-                        <TextInput id="pass" type="text" icon={FaLock} placeholder="••••••••••••••••" required
+                        <TextInput id="pass" type="password" icon={FaLock} placeholder="••••••••••••••••" required
                             value={usuario.password} onChange={handleChange} name="password" />
                     </div>
                     <button onClick={iniciarSesion}

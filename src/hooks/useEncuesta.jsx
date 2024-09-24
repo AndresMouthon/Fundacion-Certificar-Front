@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { RUTASPUBLICAS, RUTASSECRETARIA } from '../models/rutas.model';
-import { postCrearRespuestas } from '../services/EncuestaService';
+import { postGuardarRespuestas } from '../services/EncuestaService';
 import { getPreguntas } from '../services/PreguntaService';
 import { useSelector } from 'react-redux';
 
@@ -103,8 +103,8 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
                 respuesta,
                 paciente_id: pacienteId
             }));
-            const resultado = await postCrearRespuestas(respuestasToSave);
-            if (resultado.mensaje === "Respuestas registradas") {
+            const resultado = await postGuardarRespuestas(respuestasToSave);
+            if (resultado.mensaje === "Respuestas guardadas") {
                 toast.success('Respuestas guardadas correctamente');
                 if (!rol) {
                     navigate(RUTASPUBLICAS.INICIO);

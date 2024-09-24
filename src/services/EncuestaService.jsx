@@ -3,7 +3,7 @@ import { ENDPOINTS } from "../models/endpoints.model";
 
 const URL = ENDPOINTS.RESPUESTA;
 
-export const postCrearRespuestas = async (respuestas = []) => {
-    const response = await axios.post(URL + "crear-respuesta", respuestas);
+export const postGuardarRespuestas = async (respuestas = []) => {
+    const response = await axios.post(URL + "guardar-respuesta", respuestas);
     return response.data;
 };

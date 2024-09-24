@@ -51,7 +51,7 @@ const Navbar = React.memo(({ openNav, toggleNav, toggleAside, cerrarSesion }) =>
                                             <CgProfile className="h-5 w-5 mr-2" /> Mi cuenta
                                         </a>
                                     </li> */}
-                                        <li className="">
+                                        <li>
                                             <button className="w-full flex items-center px-4 py-2 text-sm text-red-700 hover:bg-red-700 hover:text-white" role="menuitem" onClick={cerrarSesion} >
                                                 <RiLogoutCircleLine className="h-5 w-5 mr-2" /> Salir
                                             </button>

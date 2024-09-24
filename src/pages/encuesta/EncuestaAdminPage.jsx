@@ -24,7 +24,7 @@ export default function EncuestaAdminPage() {
             <span className='pl-2 text-gray-700'>Busque por cédula</span>
             <BuscadorHome paciente={paciente} handleChange={handleChange} buscar={buscarPacienteDocumento} />
           </div>
-          {paciente.id && <button className='bg-yellow-400 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded ml-3' onClick={recargar}>Cancelar</button>}
+          {paciente.id && <button className='bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-3' onClick={recargar}>Cancelar</button>}
         </div>
       </Container>
       {

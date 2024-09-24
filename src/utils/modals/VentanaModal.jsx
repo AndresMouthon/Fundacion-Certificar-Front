@@ -12,7 +12,7 @@ function VentanaModal({ titulo, size, children, openModal, cerrarModal, hanleSub
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={hanleSubmit}>{loading ? <SpinerUtil size={5} /> : 'Guardar'}</Button>
-                <Button color="gray" onClick={cerrarModal}>
+                <Button color="red" onClick={cerrarModal}>
                     Cancelar
                 </Button>
             </Modal.Footer>

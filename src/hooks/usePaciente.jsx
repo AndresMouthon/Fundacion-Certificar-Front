@@ -61,10 +61,11 @@ export default function usePaciente() {
         try {
             setLoading(true);
             const response = await postGuardarPaciente(paciente);
+            console.log(response);
             setLoading(false);
             if (response.status === true) {
                 toast.success("Paciente guardado con exito");
-                navigate(RUTASPUBLICAS.ENCUESTA, { state: { paciente } });
+                navigate(RUTASPUBLICAS.ENCUESTA, { state: { paciente: response.mensaje } });
             } else if (response.errores) {
                 toast.error(response.errores[0].msg);
             }
@@ -230,7 +231,7 @@ export default function usePaciente() {
                         toast.success("Paciente eliminado con exito");
                         obtenerListadoPacientes();
                     } else {
-                        toast.error(result.message);
+                        toast.warn(resultado.mensaje);
                     };
                 };
             });

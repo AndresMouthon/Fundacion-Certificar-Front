@@ -21,7 +21,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <MdKeyboard className="w-6 h-6 text-sky-950" />
+                            <MdKeyboard className="w-6 h-6 text-yellow-400" />
                         </div>
                         <input onChange={handleChange} type="text" id="nombres" name="nombres" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5" placeholder="Nombres..." value={paciente.nombres} />
                     </div>
@@ -32,7 +32,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <MdKeyboard className="w-6 h-6 text-sky-950" />
+                            <MdKeyboard className="w-6 h-6 text-yellow-400" />
                         </div>
                         <input onChange={handleChange} type="text" id="apellidos" name="apellidos" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5" placeholder="Apellidos..." value={paciente.apellidos} />
                     </div>
@@ -45,7 +45,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <MdOutlineAssignment className="w-6 h-6 text-sky-950" />
+                            <MdOutlineAssignment className="w-6 h-6 text-green-500" />
                         </div>
                         <select onChange={handleChange} name="tipo_documento" id="select-tipo_documento" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5 cursor-pointer"
                             value={paciente.tipo_documento ? paciente.tipo_documento : "Seleccione una opcion..."}>
@@ -58,12 +58,12 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </div>
                 </div>
                 <div className="w-full">
-                    <label htmlFor="documento" className={`block mb-2 text-sm font-medium dark:text-white ${paciente.update_at ? 'text-gray-500' : 'text-gray-900'}`} >
+                    <label htmlFor="documento" className={`block mb-2 text-sm font-medium dark:text-white text-gray-900`} >
                         Documento
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <AiOutlineIdcard className={`w-5 h-5 ${paciente.update_at ? 'text-gray-500' : 'text-gray-900'}`} />
+                            <AiOutlineIdcard className={`w-6 h-6 text-green-500`} />
                         </div>
                         <input onChange={handleChange} type="text" id="documento" name="documento" className={`bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5`} placeholder="Documento..." value={paciente.documento} />
                     </div>
@@ -74,7 +74,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <BsCalendar className="w-5 h-5 text-sky-950" />
+                            <BsCalendar className="w-5 h-5 text-green-500" />
                         </div>
                         <input onChange={handleChange} type="date" id="fecha_nacimiento" name="fecha_nacimiento" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5" placeholder="Select date" value={paciente.fecha_nacimiento} />
                     </div>
@@ -87,7 +87,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <MdTransgender className="w-6 h-6 text-sky-950" />
+                            <MdTransgender className="w-6 h-6 text-blue-500" />
                         </div>
                         <select onChange={handleChange} name="genero" id="select-genero" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5 cursor-pointer"
                             value={paciente.genero ? paciente.genero : "Seleccione una opcion..."} >
@@ -103,7 +103,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <RiGovernmentLine className="w-6 h-6 text-sky-950" />
+                            <RiGovernmentLine className="w-6 h-6 text-blue-500" />
                         </div>
                         <input onChange={handleChange} type="text" id="departamento" name="departamento" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5" placeholder="Departamento..." value={paciente.departamento} />
                     </div>
@@ -114,7 +114,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                     </label>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                            <FaCity className="w-6 h-6 text-sky-950" />
+                            <FaCity className="w-6 h-6 text-blue-500" />
                         </div>
                         <input onChange={handleChange} type="text" id="ciudad" name="ciudad" className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg block w-full pl-10 pr-2.5 py-2.5" placeholder="Ciudad..." value={paciente.ciudad} />
                     </div>

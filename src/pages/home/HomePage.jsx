@@ -8,7 +8,6 @@ import usePaciente from '../../hooks/usePaciente';
 export default function HomePage() {
 
   const { paciente, loading, handleChange, obtenerPacientePorCedula } = usePaciente();
-
   return (
     <div className='relative h-screen bg-cover bg-center overflow-hidden'
       style={{ backgroundImage: `url(${imagenes.fondoEncuesta})` }}
