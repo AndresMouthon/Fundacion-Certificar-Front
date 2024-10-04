@@ -12,8 +12,6 @@ export default function EncuestaPage() {
     const { paciente: user } = location.state;
     const { setPaciente } = usePaciente();
 
-    console.log(user);
-
     const { filteredPreguntas, loading, currentStep, respuestas, nextStep, prevStep, handleInputChange, validateStep
     } = useEncuesta(user.Respuesta || [], user.id);
 
