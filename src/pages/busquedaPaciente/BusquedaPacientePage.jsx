@@ -18,7 +18,7 @@ export default function BusquedaPacientePage() {
     return (
         <div className='bg-gray-50 h-screen'>
             <NavbarPublic />
-            <div className='flex justify-center items-center mx-20 mt-10'>
+            <div className='flex justify-center items-center mx-2 sm:mx-20 mt-1 sm:mt-10'>
                 <Container>
                     <FormPaciente paciente={paciente} handleChange={handleChange} cancel={handleCancel}
                         handleSubmit={guardarPaciente} noAdmin={false} generar={generarPDF} />

@@ -1,3 +1,4 @@
+import { pdf } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +10,6 @@ import { RUTASPUBLICAS, RUTASSECRETARIA } from "../models/rutas.model";
 import { deleteEliminarPaciente, getPacienteByCedula, getPacientes, postCreatePaciente, postGuardarPaciente, putActualizarPaciente } from "../services/PacienteService";
 import { getPreguntas } from "../services/PreguntaService";
 import { usarStorage } from "../utils/localStorage/localStorage.util";
-import { pdf } from "@react-pdf/renderer";
 
 export default function usePaciente() {
 
@@ -59,16 +59,29 @@ export default function usePaciente() {
 
     const guardarPaciente = async () => {
         try {
-            setLoading(true);
-            const response = await postGuardarPaciente(paciente);
-            console.log(response);
-            setLoading(false);
-            if (response.status === true) {
-                toast.success("Paciente guardado con exito");
-                navigate(RUTASPUBLICAS.ENCUESTA, { state: { paciente: response.mensaje } });
-            } else if (response.errores) {
-                toast.error(response.errores[0].msg);
-            }
+            Swal.fire({
+                title: '¡Tratamiento de los datos personales!',
+                text: 'Sus datos personales serán tratados de forma confidencial. Por favor confirme que desea continuar.',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, continuar',
+                cancelButtonText: 'No, cancelar'
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    setLoading(true);
+                    const response = await postGuardarPaciente(paciente);
+                    console.log(response);
+                    setLoading(false);
+                    if (response.status === true) {
+                        toast.success("Paciente guardado con exito");
+                        navigate(RUTASPUBLICAS.ENCUESTA, { state: { paciente: response.mensaje } });
+                    } else if (response.errores) {
+                        toast.error(response.errores[0].msg);
+                    }
+                }
+            })
         } catch (error) {
             setLoading(false);
             console.log(error);

@@ -13,7 +13,7 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
     }
 
     return (
-        <div className='p-6'>
+        <div className='p-2 sm:p-6'>
             <div className="max-w-full flex flex-col sm:flex-row sm:space-x-4 sm:mt-3">
                 <div className="w-full">
                     <label htmlFor="nombres" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >
@@ -129,13 +129,13 @@ export default function FormPaciente({ handleChange, paciente, cancel, generar, 
                             <MdCancelPresentation className="w-5 h-5 mr-2" />
                             Cancelar
                         </button>
-                        {(paciente.Respuesta && paciente.Respuesta.length > 0) && (
+                        {/* {(paciente.Respuesta && paciente.Respuesta.length > 0) && (
                             <button type="button" className="inline-flex items-center px-4 py-2 text-sm font-medium text-orange-500 bg-transparent border-t border-b border-orange-500 hover:bg-orange-500 hover:text-white focus:z-10 focus:ring-2 focus:ring-orange-500 focus:bg-orange-500 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-orange-500 dark:focus:bg-orange-500"
                                 onClick={() => generar(paciente.documento)}>
                                 <GrDocumentPdf className="w-5 h-5 mr-2" />
                                 Generar PDF
                             </button>
-                        )}
+                        )} */}
                         <button type="button" className="inline-flex items-center px-4 py-2 text-sm font-medium text-green-500 bg-transparent border border-green-500 rounded-e-lg hover:bg-green-500 hover:text-white focus:z-10 focus:ring-2 focus:ring-green-500 focus:bg-green-500 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-green-500 dark:focus:bg-green-500"
                             onClick={handleSubmit}>
                             <FaClipboardList className="w-5 h-5 mr-2" />
