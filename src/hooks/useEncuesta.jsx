@@ -8,6 +8,9 @@ import { useSelector } from 'react-redux';
 
 function useEncuesta(pacienteRespuestas = [], pacienteId) {
 
+    console.log(pacienteId);
+    
+
     const navigate = useNavigate();
     const rol = useSelector((state) => state.rol);
     const [listadoPreguntas, setListadoPreguntas] = useState([]);
