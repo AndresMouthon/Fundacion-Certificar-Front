@@ -66,7 +66,7 @@ export default function EncuestaAdminPage() {
                               type="text"
                               value={respuestas[pregunta.id] || ''}
                               onChange={(e) => handleInputChange(pregunta.id, e.target.value)}
-                              placeholder={`Ingrese su ${pregunta.pregunta.toLowerCase()}`}
+                              placeholder={`Ingrese ${pregunta.pregunta.toLowerCase()}`}
                               className="mt-2 p-2 border border-gray-300 rounded-md w-full"
                             />
                         }

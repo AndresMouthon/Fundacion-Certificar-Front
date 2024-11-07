@@ -13,8 +13,6 @@ const steps = [
 ];
 
 export default function SteperEncuesta({ currentStep }) {
-    console.log(currentStep);
-    
     return (
         <ol className="relative flex flex-row sm:flex-col gap-4 sm:gap-0 items-start w-full sm:w-1/3 text-gray-500 border-gray-200 dark:border-gray-700 dark:text-gray-400 overflow-x-auto">
             {steps.map((step) => (

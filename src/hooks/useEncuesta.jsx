@@ -47,13 +47,13 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
             case 1:
                 return respuestas[1] && respuestas[2] && respuestas[3] && respuestas[4] && respuestas[5];
             case 2:
-                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[11];
+                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[10] && respuestas[11];
             case 3:
                 return respuestas[12] && respuestas[13] && respuestas[14];
             case 4:
-                return respuestas[15] && respuestas[17] && respuestas[18] && respuestas[19] && respuestas[20];
+                return respuestas[15] && respuestas[16] && respuestas[17] && respuestas[18] && respuestas[19] && respuestas[20] && respuestas[21] && respuestas[22];
             case 5:
-                return respuestas[21] && respuestas[22] && respuestas[23];
+                return respuestas[23] && respuestas[24] && respuestas[25];
             default:
                 return false;
         }
@@ -84,12 +84,22 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
                 [questionId]: value
             };
             if (questionId === 15) {
-                if (value === 'Sí') {
-                    if (!updatedRespuestas[16]) {
-                        updatedRespuestas[16] = '';
-                    }
-                } else if (value === 'No') {
+                if (value === 'Si') {
                     updatedRespuestas[16] = '';
+                } else if (value === 'No') {
+                    updatedRespuestas[16] = 'Sin discapacidad';
+                }
+            } else if (questionId === 18) {
+                if (value === 'Otra') {
+                    updatedRespuestas[19] = '';
+                } else if (value !== 'Otra') {
+                    updatedRespuestas[19] = 'Opción no seleccionada';
+                }
+            } else if (questionId === 20) {
+                if (value === 'Otra') {
+                    updatedRespuestas[21] = '';
+                } else if (value !== 'Otra') {
+                    updatedRespuestas[21] = 'Opción no seleccionada';
                 }
             }
             return updatedRespuestas;
