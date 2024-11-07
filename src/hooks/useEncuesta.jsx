@@ -8,9 +8,6 @@ import { getPreguntas } from '../services/PreguntaService';
 
 function useEncuesta(pacienteRespuestas = [], pacienteId) {
 
-    console.log(pacienteId);
-    
-
     const navigate = useNavigate();
     const rol = useSelector((state) => state.rol);
     const [listadoPreguntas, setListadoPreguntas] = useState([]);
