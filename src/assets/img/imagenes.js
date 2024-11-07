@@ -1,5 +1,5 @@
 import fondoEncuesta from "./fondoEncuesta/fondoEncuesta.png";
-import logo from "./logo/logo.png";
+import logo from "./emblemas/logo.png";
 
 export const imagenes = {
     fondoEncuesta,
