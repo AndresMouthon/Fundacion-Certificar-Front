@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { RUTASPUBLICAS, RUTASSECRETARIA } from '../models/rutas.model';
 import { postGuardarRespuestas } from '../services/EncuestaService';
 import { getPreguntas } from '../services/PreguntaService';
-import { useSelector } from 'react-redux';
 
 function useEncuesta(pacienteRespuestas = [], pacienteId) {
 
@@ -50,7 +50,7 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
             case 1:
                 return respuestas[1] && respuestas[2] && respuestas[3] && respuestas[4] && respuestas[5];
             case 2:
-                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[10] && respuestas[11];
+                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[11];
             case 3:
                 return respuestas[12] && respuestas[13] && respuestas[14];
             case 4:
@@ -111,7 +111,7 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
                 toast.success('Respuestas guardadas correctamente');
                 if (!rol) {
                     navigate(RUTASPUBLICAS.INICIO);
-                }else{
+                } else {
                     navigate(RUTASSECRETARIA.PACIENTES);
                 }
             } else {

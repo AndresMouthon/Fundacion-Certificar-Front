@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaIdCard, FaSearch } from 'react-icons/fa'
+import SpinerUtil from '../../utils/spinner/SpinerUtil'
 
-export default function BuscadorHome({ handleChange, paciente, buscar }) {
+export default function BuscadorHome({ loading, handleChange, paciente, buscar }) {
     return (
         <div className="flex flex-col max-w-xl sm:w-full">
             <div className="relative flex items-center">
@@ -14,8 +15,13 @@ export default function BuscadorHome({ handleChange, paciente, buscar }) {
                 </div>
                 <button className="absolute flex items-center right-0 top-0 h-full px-4 text-sm font-medium text-white bg-blue-700 rounded-r-full border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     onClick={buscar}>
-                    <FaSearch className='w-4 h-4 mr-2' />
-                    <span className='hidden sm:block'>Buscar</span>
+                    {
+                        loading ? <SpinerUtil size={5} /> :
+                            <>
+                                <FaSearch className='w-4 h-4 mr-2' />
+                                <span className='hidden sm:block'>Buscar</span>
+                            </>
+                    }
                 </button>
             </div>
         </div>
