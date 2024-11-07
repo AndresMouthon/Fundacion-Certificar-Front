@@ -77,7 +77,7 @@ export default function EncuestaAdminPage() {
                   <li className="bg-gray-100 p-4 rounded-md shadow">No hay preguntas para esta sección.</li>
                 )}
               </ul>
-              <ButtonEncuesta currentStep={currentStep} nextStep={nextStep} prevStep={prevStep} validateStep={validateStep} />
+              <ButtonEncuesta loading={loading} currentStep={currentStep} nextStep={nextStep} prevStep={prevStep} validateStep={validateStep} />
             </div>
           </div>
         </Container>

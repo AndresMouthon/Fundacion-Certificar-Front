@@ -47,7 +47,7 @@ function useEncuesta(pacienteRespuestas = [], pacienteId) {
             case 1:
                 return respuestas[1] && respuestas[2] && respuestas[3] && respuestas[4] && respuestas[5];
             case 2:
-                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[10] && respuestas[11];
+                return respuestas[6] && respuestas[7] && respuestas[8] && respuestas[9] && respuestas[11];
             case 3:
                 return respuestas[12] && respuestas[13] && respuestas[14];
             case 4:

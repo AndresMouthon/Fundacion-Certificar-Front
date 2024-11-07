@@ -60,13 +60,12 @@ export default function usePaciente() {
     const guardarPaciente = async () => {
         try {
             Swal.fire({
-                title: '¡Tratamiento de los datos personales!',
-                text: 'Sus datos personales serán tratados de forma confidencial. Por favor confirme que desea continuar.',
+                text: 'FUNDACIÓN CERTIFICAR, una institución prestadora de servicios de salud (IPS) autorizada desde 2017, garantiza el tratamiento seguro y confidencial de los datos personales conforme a la normativa vigente. Los datos serán utilizados exclusivamente para la prestación de servicios en salud y seguridad en el trabajo, gestión de citas y análisis internos para mejorar la calidad del servicio. La fundación ha implementado estrictas medidas de seguridad técnicas, administrativas y físicas para proteger los datos contra pérdidas, accesos no autorizados y usos indebidos. Además, los titulares pueden ejercer sus derechos de conocer, actualizar y rectificar sus datos, y presentar quejas ante las autoridades competentes.',
                 icon: 'info',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Si, continuar',
+                confirmButtonText: 'Si, confirmar',
                 cancelButtonText: 'No, cancelar'
             }).then(async (result) => {
                 if (result.isConfirmed) {

@@ -17,7 +17,7 @@ export default function HomePage() {
       <div className='relative z-20 flex flex-col justify-center items-center text-white h-full px-4 md:px-8'>
         <div className='flex flex-col justify-center items-center'>
           <EncabezadoHome />
-          <BuscadorHome paciente={paciente} handleChange={handleChange} buscar={obtenerPacientePorCedula} />
+          <BuscadorHome loading={loading} paciente={paciente} handleChange={handleChange} buscar={obtenerPacientePorCedula} />
         </div>
       </div>
     </div>
