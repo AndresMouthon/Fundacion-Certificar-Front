@@ -15,6 +15,8 @@ export default function EncuestaAdminPage() {
   if (loading) return <div>Loading...</div>;
   if (!filteredPreguntas.length) return <div>No hay preguntas disponibles para esta sección.</div>;
   const mostrarPregunta16 = respuestas[15] === 'Si';
+  const mostrarPregunta19 = respuestas[18] === 'Otra';
+  const mostrarPregunta20 = respuestas[20] === 'Otra';
 
   return (
     <div className='my-5'>
@@ -36,7 +38,7 @@ export default function EncuestaAdminPage() {
               <ul className='space-y-4'>
                 {filteredPreguntas.length > 0 ? (
                   filteredPreguntas.map(pregunta => {
-                    if (pregunta.id === 16 && !mostrarPregunta16) {
+                    if ((pregunta.id === 16 && !mostrarPregunta16) || (pregunta.id === 19 && !mostrarPregunta19) || (pregunta.id === 21 && !mostrarPregunta20)) {
                       return null;
                     }
                     return (
