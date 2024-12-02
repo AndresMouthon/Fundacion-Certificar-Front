@@ -1,8 +1,15 @@
+// export const ENDPOINTS = {
+//     LOGIN: "https://clinica-servicelet-back.onrender.com/api/login",
+//     PACIENTE: "https://clinica-servicelet-back.onrender.com/api/pacientes/",
+//     PREGUNTA: "https://clinica-servicelet-back.onrender.com/api/preguntas/",
+//     RESPUESTA : "https://clinica-servicelet-back.onrender.com/api/respuestas/",
+// } 
+
 export const ENDPOINTS = {
-    LOGIN: "https://clinica-servicelet-back.onrender.com/api/login",
-    PACIENTE: "https://clinica-servicelet-back.onrender.com/api/pacientes/",
-    PREGUNTA: "https://clinica-servicelet-back.onrender.com/api/preguntas/",
-    RESPUESTA : "https://clinica-servicelet-back.onrender.com/api/respuestas/",
+    LOGIN: "https://apibackcertificar.reddeinnovacion.com.co/api/login",
+    PACIENTE: "https://apibackcertificar.reddeinnovacion.com.co/api/pacientes/",
+    PREGUNTA: "https://apibackcertificar.reddeinnovacion.com.co/api/preguntas/",
+    RESPUESTA : "https://apibackcertificar.reddeinnovacion.com.co/api/respuestas/",
 }
 
 // export const ENDPOINTS = {

@@ -1,13 +1,12 @@
-import { AiOutlineGlobal, AiOutlineIdcard } from "react-icons/ai";
+import { AiOutlineIdcard } from "react-icons/ai";
 import { BsCalendar } from "react-icons/bs";
 import { FaCity, FaEye, FaRegEdit } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { GrDocumentPdf, GrStatusUnknown } from "react-icons/gr";
 import { MdCircle, MdDelete, MdKeyboard, MdTransgender } from "react-icons/md";
 import { RiGovernmentLine } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
-import { RUTASSECRETARIA } from "../rutas.model";
 import { useNavigate } from "react-router-dom";
+import { RUTASSECRETARIA } from "../rutas.model";
 
 export const PacienteColumns = ({ capturarInformacion, eliminarPaciente, generarPDF }) => {
 
@@ -131,4 +130,5 @@ export const PacienteColumns = ({ capturarInformacion, eliminarPaciente, generar
             width: "200px",
         },
     ];
+    
 };
