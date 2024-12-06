@@ -7,7 +7,7 @@ export default function EncabezadoHome() {
                 BIENVENIDO A NUESTRO SISTEMA
             </h1>
             <p className="text-lg md:text-xl lg:w-1/2 font-semibold text-white text-center mb-4">
-                ¡Bienvenido! 🙌 Por favor, ingresa tu número de documento para iniciar. Verificaremos tu información y,
+                Aqui podrás realizar tu formulario de manera rapida y segura. Por favor, ingresa tu número de documento para iniciar. Verificaremos tu información y,
                 si es necesario, podrás actualizarla o completarla. Una vez todo esté listo,
                 podrás continuar con las preguntas. ¡Gracias por participar!
             </p>
